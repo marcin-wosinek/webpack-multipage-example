@@ -4,7 +4,8 @@
   "description": "Use case for using webpack on multiple html pages, that shares part of their js.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm dist -r; webpack --mode production;"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/marcin-wosinek/webpack-multipage-example/issues"
   },
-  "homepage": "https://github.com/marcin-wosinek/webpack-multipage-example#readme"
+  "homepage": "https://github.com/marcin-wosinek/webpack-multipage-example#readme",
+  "devDependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  }
 }
