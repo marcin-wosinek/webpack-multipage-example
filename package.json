@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/marcin-wosinek/webpack-multipage-example#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0"
   }
