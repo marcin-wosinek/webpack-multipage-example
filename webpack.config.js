@@ -10,18 +10,15 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: "./a.html",
-      filename: "a.html",
-      chunks: ["a"],
-    }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: "./b.html",
-      filename: "b.html",
-      chunks: ["b"],
-    }),
-  ],
+  plugins: [].concat(
+    ["a", "b"].map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: `./${page}.html`,
+          filename: `${page}.html`,
+          chunks: [page],
+        })
+    )
+  ),
 };
