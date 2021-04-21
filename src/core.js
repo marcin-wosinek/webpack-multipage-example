@@ -1,3 +1,3 @@
-const element = document.getElementById("core");
+import $ from "jquery";
 
-element.innerHTML = "Core module";
+$("#core").html("Core module");

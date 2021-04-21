@@ -10,6 +10,11 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   plugins: [].concat(
     ["a", "b"].map(
       (page) =>
