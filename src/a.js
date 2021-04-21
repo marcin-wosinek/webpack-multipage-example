@@ -1,5 +1,4 @@
+import $ from "jquery";
 import "./core";
 
-const element = document.getElementById("a");
-
-element.innerHTML = "A file, file A";
+$("#a").html("A file, file A");
