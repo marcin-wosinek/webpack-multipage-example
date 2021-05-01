@@ -1,11 +1,13 @@
 const path = require("path"),
   HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const pages = ["a", "b"];
+
 module.exports = {
-  entry: {
-    a: "./src/a.js",
-    b: "./src/b.js",
-  },
+  entry: pages.reduce((config, page) => {
+    config[page] = `./src/${page}.js`;
+    return config;
+  }, {}),
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
@@ -16,7 +18,7 @@ module.exports = {
     },
   },
   plugins: [].concat(
-    ["a", "b"].map(
+    pages.map(
       (page) =>
         new HtmlWebpackPlugin({
           inject: true,
